@@ -26,35 +26,32 @@ function extraction() {
 function extract() {
   let extractNumber = Math.floor(Math.random() * 90) + 1;
   if (extractNumbers.lenght == 90) {
-    alert('Hai esaurito tutti i numeri')
-    btnNumber.setAttribute('disabled', 'true')
+    alert("Hai esaurito tutti i numeri");
+    btnNumber.setAttribute("disabled", "true");
     return;
-  }
-  else if (extractNumbers.includes(extractNumber)) {
+  } else if (extractNumbers.includes(extractNumber)) {
     extract();
   } else {
     extractNumbers.push(extractNumber);
-    extracted(extractNumber);
+    alreadyExtract(extractNumber);
   }
   let showNumber = document.getElementById("extractNumber");
   showNumber.innerText = extractNumber;
-  
 }
-function extracted(divNumber) {
-    const extract = document.querySelectorAll("#container div");
-    const extractTable = document.querySelectorAll("#table div");
-    extract.forEach((element) => {
-        if (element.innerText == divNumber) {
-            element.classList.add('extract')
-        }
-    });
-    extractTable.forEach((element) => {
-        if (element.innerText == divNumber) {
-            element.classList.add('extract')
-        }
-    })
+function alreadyExtract(divNumber) {
+  const extract = document.querySelectorAll("#container div");
+  const extractTable = document.querySelectorAll("#table div");
+  extract.forEach((element) => {
+    if (element.innerText == divNumber) {
+      element.classList.add("extract");
+    }
+  });
+  extractTable.forEach((element) => {
+    if (element.innerText == divNumber) {
+      element.classList.add("extract");
+    }
+  });
 }
-
 
 function table() {
   for (let i = 0; i < 24; i++) {
