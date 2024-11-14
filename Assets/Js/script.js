@@ -18,7 +18,7 @@ for (let i = 0; i < 90; i++) {
 }
 
 function extraction() {
-  btnRandom.addEventListener("click", function () {
+  btnNumber.addEventListener("click", function () {
     let extractNumber = Math.floor(Math.random() * 90) + 1;
     extractNumbers.push(extractNumber);
     console.log(extractNumbers);

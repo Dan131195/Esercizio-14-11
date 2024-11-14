@@ -9,6 +9,8 @@ main {
   width: 750px;
   background-color: rgba(250, 2, 2, 0.822);
   border-radius: 10px;
+  display: inline-block;
+  margin-top: 2%;
 }
 h1 {
   margin: 30px;
@@ -18,21 +20,22 @@ h1 {
 }
 
 #container {
-  width: 600px;
+  width: 500px;
 }
 
 .number {
   border-radius: 5px;
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   display: inline-block;
   margin: 5px;
   text-align: center;
   background-color: beige;
   box-sizing: border-box;
-  padding-top: 2%;
+  padding-top: 1%;
   font-weight: bold;
   font-size: 1.5em;
+  border: hidden;
 }
 
 button {
@@ -55,10 +58,17 @@ button {
   box-sizing: border-box;
   margin-top: 10px;
 }
-#table {
-    width: 400px;
-    padding-bottom: 30px;
+section {
+    display: inline-block;
+    margin-left: 50px;
+    background-color: rgba(250, 2, 2, 0.822);
+  border-radius: 10px;
 }
+#table {
+  width: 400px;
+  padding-bottom: 30px;
+}
+
 .table {
   border-radius: 5px;
   width: 50px;
@@ -72,7 +82,14 @@ button {
   font-weight: bold;
   font-size: 1.5em;
 }
+
 .extract {
-    background-color: rgb(243, 104, 104);
-    border: 2px solid rgb(43, 0, 0);
-  }
+  background-color: rgb(243, 104, 104);
+  border: 2px solid rgb(43, 0, 0);
+}
+
+h3 {
+    color: white;
+    font-size: 2em;
+    margin: 20px;
+}
