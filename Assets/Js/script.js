@@ -6,6 +6,7 @@ const extractNumbers = [];
 document.addEventListener("load", init());
 
 function init() {
+  table();
   extraction();
 }
 
@@ -24,17 +25,27 @@ function extraction() {
     let showNumber = document.getElementById("extractNumber");
     showNumber.innerText = extractNumber;
     const extract = document.querySelectorAll("#container div");
+    const extractTable = document.querySelectorAll("#table div");
     for (let i = 0; i < extract.length; i++) {
-      if (extract[i].innerText == extractNumber) {
+      if (
+        extract[i].innerText == extractNumber) {
         extract[i].classList.add("extract");
       }
     }
+    for (let i = 0; i < extractTable.length; i++) {
+        if (
+          extractTable[i].innerText == extractNumber) {
+          extractTable[i].classList.add("extract");
+        }
+      }
   });
 }
 
 function table() {
-    for (let i = 0; i < 24; i++) {
-        
-    }
+  for (let i = 0; i < 24; i++) {
+    const numberTable = document.createElement("div");
+    numberTable.innerText = Math.floor(Math.random() * 90) + 1;
+    numberTable.classList.add('table')
+    tables.appendChild(numberTable);
+  }
 }
-
